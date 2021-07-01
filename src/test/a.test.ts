@@ -1,11 +1,12 @@
 import b from '../app/a'
+import { jest as requiredJest, describe, test, expect } from '@jest/globals'
  
 // let b =x=>x 
 
   
 describe("first test", () => {
   test("hey", () => { 
-    let mockFn = jest.fn(b)
+    let mockFn = requiredJest.fn(b)
     mockFn(2)  
     expect(mockFn).toBeCalled() 
     expect(mockFn).toBeCalledWith(2)

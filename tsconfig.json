@@ -4,7 +4,7 @@
       "module": "commonjs",
       "lib": ["dom", "es6", "es2017", "esnext.asynciterable"],
       "sourceMap": true,
-      "outDir": "./dist",
+    //   "outDir": "./dist",
       "moduleResolution": "node",
   
       "removeComments": true,
@@ -18,8 +18,13 @@
       "noFallthroughCasesInSwitch": true,
       "allowSyntheticDefaultImports": false,
       "emitDecoratorMetadata": true,
-      "experimentalDecorators": true
+      "experimentalDecorators": true,
+      "typeRoots": [
+        "../node_modules/@types",
+        "../@types/types.d.ts"
+      ],
     },
     "exclude": ["node_modules"],
-    "include": ["./src/**/*.tsx", "./src/**/*.ts"]
+    // "include": ["./src/**/*.tsx", "./src/**/*.ts"]
+    "include": ["./src/app/**/*.tsx", "./src/app/**/*.ts"]
   }
