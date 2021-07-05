@@ -1,11 +1,15 @@
-interface MyFn< K> {
-    ():K
+interface MyFn {
+    ():number[]
 }
 
-export let Fn: MyFn<string[]> = () => {
-    let arr = [1,2,3,4,5]
-   return arr.map(item => {
-        return item.toString()
-    }
-    )
-} 
+let arr = [1, 2, 3, 4, 5]
+export let Fn: MyFn = () => {
+    console.log('my array before loop',arr)
+    for (let i in arr){
+        let item = arr[i]
+        arr[i] =++item
+    } 
+    console.log('my array after loop',arr)
+    return arr
+    
+}
