@@ -9,15 +9,15 @@ describe("Testing mockClear,mockReset,mockRestore",()=> {
     
     mockFn()
     
-    console.log(mockFn.mock.calls) // [ [] ]
-    console.log(mockFn.mock.instances) //[ undefined ]
-    console.log(mockFn.mock.invocationCallOrder) //[ 1 ]
-    console.log(mockFn.mock.results) // [ { type: 'return', value: [ 2, 3, 4, 5, 6 ] } ]
+    // console.log(mockFn.mock.calls) // [ [] ]
+    // console.log(mockFn.mock.instances) //[ undefined ]
+    // console.log(mockFn.mock.invocationCallOrder) //[ 1 ]
+    // console.log(mockFn.mock.results) // [ { type: 'return', value: [ 2, 3, 4, 5, 6 ] } ]
     mockFn()
-    console.log(mockFn.mock.calls) // [ [],[] ]
-    console.log(mockFn.mock.instances) //[ undefined, undefined ]
-    console.log(mockFn.mock.invocationCallOrder)   // [ 1, 2 ]
-    console.log(mockFn.mock.results)
+    // console.log(mockFn.mock.calls) // [ [],[] ]
+    // console.log(mockFn.mock.instances) //[ undefined, undefined ]
+    // console.log(mockFn.mock.invocationCallOrder)   // [ 1, 2 ]
+    // console.log(mockFn.mock.results)
     // [
     //   { type: 'return', value: [ 3, 4, 5, 6, 7 ] },
     //   { type: 'return', value: [ 3, 4, 5, 6, 7 ] }
@@ -25,10 +25,10 @@ describe("Testing mockClear,mockReset,mockRestore",()=> {
 
     mockFn.mockClear()
     mockFn()
-    console.log(mockFn.mock.calls)  // [ [] ]
-    console.log(mockFn.mock.instances) //  [ undefined ]
-    console.log(mockFn.mock.invocationCallOrder)   // [3]
-    console.log(mockFn.mock.results) //[ { type: 'return', value: [ 4, 5, 6, 7, 8 ] } ]
+    // console.log(mockFn.mock.calls)  // [ [] ]
+    // console.log(mockFn.mock.instances) //  [ undefined ]
+    // console.log(mockFn.mock.invocationCallOrder)   // [3]
+    // console.log(mockFn.mock.results) //[ { type: 'return', value: [ 4, 5, 6, 7, 8 ] } ]
     expect(5).toBe(5) 
   }) 
 

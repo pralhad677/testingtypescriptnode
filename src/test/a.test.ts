@@ -10,7 +10,7 @@ describe("first test", () => {
     mockFn(2)  
     expect(mockFn).toBeCalled() 
     expect(mockFn).toBeCalledWith(2)
-    console.log(mockFn.mock.calls) //[[2]]
+    // console.log(mockFn.mock.calls) //[[2]]
     expect(mockFn.mock.calls[0]).toContain(2)
   })  
 })

@@ -1,6 +1,6 @@
 
 import { jest, describe, test, expect } from '@jest/globals'
-import mockConstructor from 'ts-jest'
+// import mockConstructor from 'ts-jest'
 import {Person} from '../app/class'
 // jest.mock('../app/class')
 
@@ -22,9 +22,10 @@ describe('Testing class', () => {
   test('mockFn.mock.calls', () => {
     let mockFn = jest.fn(a)
     mockFn(3)
-    let mf: typeof mockConstructor = new mockFn(1) //
-    console.log('mf',mf) //mf mockConstructor {}
-    console.log(mockFn.mock) // below
+    // let mf: typeof mockConstructor = new mockFn(1) //
+   
+    // console.log('mf',mf) //mf mockConstructor {}
+    // console.log(mockFn.mock) // below
     // {
     //   calls: [ [ 3 ], [ 1 ] ],
     //   instances: [ undefined, mockConstructor {} ],
@@ -32,7 +33,7 @@ describe('Testing class', () => {
     //   results: [ { type: 'return', value: 3 }, { type: 'return', value: 1 } ]
     // }
 
-    console.log(mockFn.mock.calls) // [[3]] 
+    // console.log(mockFn.mock.calls) // [[3]] 
     
     expect(mockFn.mock.calls[0]).toContain(3)
   })
