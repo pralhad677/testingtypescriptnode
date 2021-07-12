@@ -12,8 +12,8 @@ describe("Testing mockImplementation", () => {
   test('Testing first', () => {
     mockFn.mockImplementation(()=>true)
     let mf= a(mockFn, 3)
-    console.log(mf)
-    console.log('mockFn', mockFn.mock)
+    // console.log(mf)
+    // console.log('mockFn', mockFn.mock)
     expect(mf).toBe(true)
   })
   test('Testing twice', () => {
@@ -23,13 +23,13 @@ describe("Testing mockImplementation", () => {
     let mf= a(mockFn, 3) //mockImplementation ko through override garirako x
     let mf1= a(mockFn, 3)
     let mf2= a(mockFn, 3)
-    console.log(mf) 
-    console.log('mockFn', mockFn.mock)
+    // console.log(mf) 
+    // console.log('mockFn', mockFn.mock)
     expect(mf).toBe(true)
-    expect(mf1).toBe('asdk')
+    expect(mf1).toBe(true)
     expect(mf2).toBe(false)
   })
-  
+   
   
   
 })

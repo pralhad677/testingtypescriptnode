@@ -20,7 +20,7 @@ describe("Testing clearMocks", () => {
   test('Testing twice', () => {
     // mockFn.mockClear();
     a(mockFn, 4)
-    console.log('mockFn', mockFn.mock)
+    // console.log('mockFn', mockFn.mock)
     // {
     //   calls: [ [ 4 ] ],
     //   instances: [ undefined ],
@@ -34,7 +34,7 @@ describe("Testing clearMocks", () => {
   test('Testing thrice', () => {
     // mockFn.mockClear();
     a(mockFn,3)   
-    console.log('mockFn', mockFn.mock)
+    // console.log('mockFn', mockFn.mock)
   //   {
   //   calls: [ [ 3 ] ],
   //   instances: [ undefined ],
